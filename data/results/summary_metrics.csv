@@ -1,0 +1,5 @@
+model,tier,total_runs,json_compliance_pct,accuracy_pct,avg_latency_ms,avg_completion_tokens,determinism_pct
+openai/gpt-oss-20b,T0_zero_shot,9,0.0,44.4,890.4,623.2,66.7
+openai/gpt-oss-20b,T1_schema_only,9,100.0,66.7,1851.1,380.9,33.3
+openai/gpt-oss-20b,T2_zero_shot_cot,9,88.9,66.7,6262.6,804.2,33.3
+openai/gpt-oss-20b,T3_few_shot_cot,9,100.0,100.0,5908.8,731.6,66.7

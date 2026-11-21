@@ -1,0 +1,13 @@
+model,tier,domain,accuracy_pct,json_compliance_pct
+openai/gpt-oss-20b,T0_zero_shot,analog_circuits,33.3,0.0
+openai/gpt-oss-20b,T0_zero_shot,cpp_execution,0.0,0.0
+openai/gpt-oss-20b,T0_zero_shot,digital_logic,100.0,0.0
+openai/gpt-oss-20b,T1_schema_only,analog_circuits,33.3,100.0
+openai/gpt-oss-20b,T1_schema_only,cpp_execution,66.7,100.0
+openai/gpt-oss-20b,T1_schema_only,digital_logic,100.0,100.0
+openai/gpt-oss-20b,T2_zero_shot_cot,analog_circuits,33.3,66.7
+openai/gpt-oss-20b,T2_zero_shot_cot,cpp_execution,66.7,100.0
+openai/gpt-oss-20b,T2_zero_shot_cot,digital_logic,100.0,100.0
+openai/gpt-oss-20b,T3_few_shot_cot,analog_circuits,100.0,100.0
+openai/gpt-oss-20b,T3_few_shot_cot,cpp_execution,100.0,100.0
+openai/gpt-oss-20b,T3_few_shot_cot,digital_logic,100.0,100.0
