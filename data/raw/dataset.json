@@ -1,0 +1,422 @@
+[
+  {
+    "id": "logic_01",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=0, and C=1. Inputs A and B feed into a 2-input OR gate to produce intermediate signal X. Signals X and C then feed into a 2-input OR gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_02",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=0, and C=0. Inputs A and B feed into a 2-input XOR gate to produce intermediate signal X. Signals X and C then feed into a 2-input NOR gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_03",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=0, and C=0. Inputs A and B feed into a 2-input OR gate to produce intermediate signal X. Signals X and C then feed into a 2-input OR gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "0",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_04",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=0, and C=1. Inputs A and B feed into a 2-input OR gate to produce intermediate signal X. Signals X and C then feed into a 2-input NOR gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "0",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_05",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=1, B=0, and C=0. Inputs A and B feed into a 2-input NOR gate to produce intermediate signal X. Signals X and C then feed into a 2-input NAND gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_06",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=1, B=0, and C=0. Inputs A and B feed into a 2-input NAND gate to produce intermediate signal X. Signals X and C then feed into a 2-input AND gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "0",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_07",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=1, and C=0. Inputs A and B feed into a 2-input NAND gate to produce intermediate signal X. Signals X and C then feed into a 2-input NAND gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_08",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=1, B=0, and C=1. Inputs A and B feed into a 2-input XOR gate to produce intermediate signal X. Signals X and C then feed into a 2-input AND gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_09",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=1, B=0, and C=1. Inputs A and B feed into a 2-input XOR gate to produce intermediate signal X. Signals X and C then feed into a 2-input NAND gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "0",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_10",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=0, and C=0. Inputs A and B feed into a 2-input OR gate to produce intermediate signal X. Signals X and C then feed into a 2-input NAND gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_11",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=0, and C=0. Inputs A and B feed into a 2-input NOR gate to produce intermediate signal X. Signals X and C then feed into a 2-input NAND gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_12",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=1, B=1, and C=0. Inputs A and B feed into a 2-input NAND gate to produce intermediate signal X. Signals X and C then feed into a 2-input NAND gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_13",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=1, and C=0. Inputs A and B feed into a 2-input XOR gate to produce intermediate signal X. Signals X and C then feed into a 2-input OR gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_14",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=0, and C=1. Inputs A and B feed into a 2-input NOR gate to produce intermediate signal X. Signals X and C then feed into a 2-input NAND gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "0",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_15",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=1, and C=0. Inputs A and B feed into a 2-input OR gate to produce intermediate signal X. Signals X and C then feed into a 2-input AND gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "0",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_16",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=1, B=1, and C=1. Inputs A and B feed into a 2-input AND gate to produce intermediate signal X. Signals X and C then feed into a 2-input OR gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_17",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=1, B=0, and C=1. Inputs A and B feed into a 2-input NOR gate to produce intermediate signal X. Signals X and C then feed into a 2-input NOR gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "0",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_18",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=1, and C=0. Inputs A and B feed into a 2-input OR gate to produce intermediate signal X. Signals X and C then feed into a 2-input XOR gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_19",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=1, B=1, and C=1. Inputs A and B feed into a 2-input NAND gate to produce intermediate signal X. Signals X and C then feed into a 2-input OR gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "1",
+    "tolerance": 0.0
+  },
+  {
+    "id": "logic_20",
+    "domain": "digital_logic",
+    "task": "A 2-stage digital logic circuit takes binary inputs A=0, B=1, and C=0. Inputs A and B feed into a 2-input AND gate to produce intermediate signal X. Signals X and C then feed into a 2-input AND gate to produce final output Q. Determine the exact binary value (0 or 1) of Q.",
+    "expected_answer": "0",
+    "tolerance": 0.0
+  },
+  {
+    "id": "circuit_01",
+    "domain": "analog_circuits",
+    "task": "Calculate the -3 dB cutoff frequency (in Hz, rounded to 2 decimal places) of a first-order RC low-pass filter with R = 220 Ohms and C = 470 nF.",
+    "expected_answer": "1539.22",
+    "tolerance": 0.5
+  },
+  {
+    "id": "circuit_02",
+    "domain": "analog_circuits",
+    "task": "Calculate the resonant frequency (in kHz, rounded to 2 decimal places) of an ideal series LC circuit with L = 2.2 mH and C = 470 nF.",
+    "expected_answer": "4.95",
+    "tolerance": 0.05
+  },
+  {
+    "id": "circuit_03",
+    "domain": "analog_circuits",
+    "task": "Calculate the -3 dB cutoff frequency (in Hz, rounded to 2 decimal places) of a first-order RC low-pass filter with R = 1000 Ohms and C = 220 nF.",
+    "expected_answer": "723.43",
+    "tolerance": 0.5
+  },
+  {
+    "id": "circuit_04",
+    "domain": "analog_circuits",
+    "task": "Calculate the resonant frequency (in kHz, rounded to 2 decimal places) of an ideal series LC circuit with L = 1 mH and C = 100 nF.",
+    "expected_answer": "15.92",
+    "tolerance": 0.05
+  },
+  {
+    "id": "circuit_05",
+    "domain": "analog_circuits",
+    "task": "Calculate the -3 dB cutoff frequency (in Hz, rounded to 2 decimal places) of a first-order RC low-pass filter with R = 1000 Ohms and C = 220 nF.",
+    "expected_answer": "723.43",
+    "tolerance": 0.5
+  },
+  {
+    "id": "circuit_06",
+    "domain": "analog_circuits",
+    "task": "Calculate the resonant frequency (in kHz, rounded to 2 decimal places) of an ideal series LC circuit with L = 10 mH and C = 220 nF.",
+    "expected_answer": "3.39",
+    "tolerance": 0.05
+  },
+  {
+    "id": "circuit_07",
+    "domain": "analog_circuits",
+    "task": "Calculate the -3 dB cutoff frequency (in Hz, rounded to 2 decimal places) of a first-order RC low-pass filter with R = 470 Ohms and C = 220 nF.",
+    "expected_answer": "1539.22",
+    "tolerance": 0.5
+  },
+  {
+    "id": "circuit_08",
+    "domain": "analog_circuits",
+    "task": "Calculate the resonant frequency (in kHz, rounded to 2 decimal places) of an ideal series LC circuit with L = 1 mH and C = 470 nF.",
+    "expected_answer": "7.34",
+    "tolerance": 0.05
+  },
+  {
+    "id": "circuit_09",
+    "domain": "analog_circuits",
+    "task": "Calculate the -3 dB cutoff frequency (in Hz, rounded to 2 decimal places) of a first-order RC low-pass filter with R = 4700 Ohms and C = 10 nF.",
+    "expected_answer": "3386.28",
+    "tolerance": 0.5
+  },
+  {
+    "id": "circuit_10",
+    "domain": "analog_circuits",
+    "task": "Calculate the resonant frequency (in kHz, rounded to 2 decimal places) of an ideal series LC circuit with L = 47 mH and C = 220 nF.",
+    "expected_answer": "1.57",
+    "tolerance": 0.05
+  },
+  {
+    "id": "circuit_11",
+    "domain": "analog_circuits",
+    "task": "Calculate the -3 dB cutoff frequency (in Hz, rounded to 2 decimal places) of a first-order RC low-pass filter with R = 10000 Ohms and C = 47 nF.",
+    "expected_answer": "338.63",
+    "tolerance": 0.5
+  },
+  {
+    "id": "circuit_12",
+    "domain": "analog_circuits",
+    "task": "Calculate the resonant frequency (in kHz, rounded to 2 decimal places) of an ideal series LC circuit with L = 47 mH and C = 47 nF.",
+    "expected_answer": "3.39",
+    "tolerance": 0.05
+  },
+  {
+    "id": "circuit_13",
+    "domain": "analog_circuits",
+    "task": "Calculate the -3 dB cutoff frequency (in Hz, rounded to 2 decimal places) of a first-order RC low-pass filter with R = 100 Ohms and C = 47 nF.",
+    "expected_answer": "33862.75",
+    "tolerance": 0.5
+  },
+  {
+    "id": "circuit_14",
+    "domain": "analog_circuits",
+    "task": "Calculate the resonant frequency (in kHz, rounded to 2 decimal places) of an ideal series LC circuit with L = 10 mH and C = 22 nF.",
+    "expected_answer": "10.73",
+    "tolerance": 0.05
+  },
+  {
+    "id": "circuit_15",
+    "domain": "analog_circuits",
+    "task": "Calculate the -3 dB cutoff frequency (in Hz, rounded to 2 decimal places) of a first-order RC low-pass filter with R = 1000 Ohms and C = 10 nF.",
+    "expected_answer": "15915.49",
+    "tolerance": 0.5
+  },
+  {
+    "id": "circuit_16",
+    "domain": "analog_circuits",
+    "task": "Calculate the resonant frequency (in kHz, rounded to 2 decimal places) of an ideal series LC circuit with L = 47 mH and C = 470 nF.",
+    "expected_answer": "1.07",
+    "tolerance": 0.05
+  },
+  {
+    "id": "circuit_17",
+    "domain": "analog_circuits",
+    "task": "Calculate the -3 dB cutoff frequency (in Hz, rounded to 2 decimal places) of a first-order RC low-pass filter with R = 470 Ohms and C = 220 nF.",
+    "expected_answer": "1539.22",
+    "tolerance": 0.5
+  },
+  {
+    "id": "circuit_18",
+    "domain": "analog_circuits",
+    "task": "Calculate the resonant frequency (in kHz, rounded to 2 decimal places) of an ideal series LC circuit with L = 2.2 mH and C = 220 nF.",
+    "expected_answer": "7.23",
+    "tolerance": 0.05
+  },
+  {
+    "id": "circuit_19",
+    "domain": "analog_circuits",
+    "task": "Calculate the -3 dB cutoff frequency (in Hz, rounded to 2 decimal places) of a first-order RC low-pass filter with R = 100 Ohms and C = 470 nF.",
+    "expected_answer": "3386.28",
+    "tolerance": 0.5
+  },
+  {
+    "id": "circuit_20",
+    "domain": "analog_circuits",
+    "task": "Calculate the resonant frequency (in kHz, rounded to 2 decimal places) of an ideal series LC circuit with L = 4.7 mH and C = 470 nF.",
+    "expected_answer": "3.39",
+    "tolerance": 0.05
+  },
+  {
+    "id": "cpp_01",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 21;\nint y = ((x << 3) ^ 0x0F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "167",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_02",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 9;\nint y = ((x << 2) ^ 0x0F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "43",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_03",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 22;\nint y = ((x << 3) ^ 0x0F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "191",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_04",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 24;\nint y = ((x << 2) ^ 0x1F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "127",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_05",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 5;\nint y = ((x << 1) ^ 0x1F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "21",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_06",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 14;\nint y = ((x << 1) ^ 0x0F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "19",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_07",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 12;\nint y = ((x << 3) ^ 0x0F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "111",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_08",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 7;\nint y = ((x << 3) ^ 0x1F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "39",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_09",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 7;\nint y = ((x << 3) ^ 0x0F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "55",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_10",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 9;\nint y = ((x << 3) ^ 0x1F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "87",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_11",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 22;\nint y = ((x << 1) ^ 0x1F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "51",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_12",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 21;\nint y = ((x << 3) ^ 0x1F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "183",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_13",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 11;\nint y = ((x << 3) ^ 0x3F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "103",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_14",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 11;\nint y = ((x << 3) ^ 0x1F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "71",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_15",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 17;\nint y = ((x << 3) ^ 0x3F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "183",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_16",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 16;\nint y = ((x << 2) ^ 0x3F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "127",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_17",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 19;\nint y = ((x << 1) ^ 0x0F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "41",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_18",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 12;\nint y = ((x << 1) ^ 0x1F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "7",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_19",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 5;\nint y = ((x << 3) ^ 0x3F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "23",
+    "tolerance": 0.0
+  },
+  {
+    "id": "cpp_20",
+    "domain": "cpp_execution",
+    "task": "Determine the exact integer printed to stdout by the following C++ snippet:\nint x = 12;\nint y = ((x << 3) ^ 0x0F) & 0xFF;\nstd::cout << y;",
+    "expected_answer": "111",
+    "tolerance": 0.0
+  }
+]
