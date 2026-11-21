@@ -44,8 +44,8 @@ def check_accuracy(extracted: str, expected: str, tolerance: float) -> bool:
         return extracted.strip() == expected.strip()
 
 
-def call_with_retry(client: OpenAI, model: str, sys_prompt: str, usr_prompt: str, max_retries: int = 6):
-    """Calls the LLM API with automatic backoff on 429 TPM/RPM rate limits."""
+def call_with_retry(client: OpenAI, model: str, sys_prompt: str, usr_prompt: str, max_retries: int = 5):
+    """Calls the LLM API with automatic backoff on transient RPM/TPM 429 limits."""
     wait_sec = 5.0
     for attempt in range(1, max_retries + 1):
         try:
@@ -60,8 +60,8 @@ def call_with_retry(client: OpenAI, model: str, sys_prompt: str, usr_prompt: str
             )
             latency_ms = (time.perf_counter() - start) * 1000
             return response, latency_ms
-        except RateLimitError:
-            if attempt == max_retries:
+        except RateLimitError as e:
+            if "tokens per day" in str(e).lower() or attempt == max_retries:
                 raise
             print(f"    [Rate limit 429] Pausing {wait_sec:.1f}s before retry {attempt}/{max_retries}...")
             time.sleep(wait_sec)
@@ -78,7 +78,20 @@ def run_benchmark(model: str, base_url: str, api_key: str, n_runs: int, pilot: b
         dataset = [dataset[0], dataset[20], dataset[40]]
         print("Running in PILOT mode (3 tasks across domains)...")
 
-    records = []
+    safe_model_name = model.replace("/", "_")
+    tag = "pilot" if pilot else "full"
+    out_file = Path(f"data/results/{safe_model_name}_{tag}.csv")
+    out_file.parent.mkdir(parents=True, exist_ok=True)
+
+    # Load existing checkpoint if resuming an interrupted run
+    completed_keys = set()
+    if out_file.exists():
+        existing_df = pd.read_csv(out_file)
+        completed_keys = set(
+            zip(existing_df["tier"], existing_df["task_id"], existing_df["run"])
+        )
+        print(f"Resuming from checkpoint: {len(completed_keys)} trials already saved in {out_file}")
+
     total_calls = len(PROMPT_TIERS) * len(dataset) * n_runs
     call_count = 0
 
@@ -86,8 +99,10 @@ def run_benchmark(model: str, base_url: str, api_key: str, n_runs: int, pilot: b
         for item in dataset:
             for run_idx in range(1, n_runs + 1):
                 call_count += 1
-                sys_prompt, usr_prompt = builder(item["task"])
+                if (tier_name, item["id"], run_idx) in completed_keys:
+                    continue
 
+                sys_prompt, usr_prompt = builder(item["task"])
                 response, latency_ms = call_with_retry(client, model, sys_prompt, usr_prompt)
                 raw_text = response.choices[0].message.content or ""
                 usage = response.usage
@@ -95,7 +110,7 @@ def run_benchmark(model: str, base_url: str, api_key: str, n_runs: int, pilot: b
                 valid_json, extracted = extract_answer(raw_text, tier_name)
                 is_correct = check_accuracy(extracted, item["expected_answer"], item["tolerance"])
 
-                records.append({
+                row = pd.DataFrame([{
                     "timestamp": datetime.now(timezone.utc).isoformat(),
                     "model": model,
                     "tier": tier_name,
@@ -109,22 +124,19 @@ def run_benchmark(model: str, base_url: str, api_key: str, n_runs: int, pilot: b
                     "latency_ms": round(latency_ms, 1),
                     "prompt_tokens": usage.prompt_tokens if usage else 0,
                     "completion_tokens": usage.completion_tokens if usage else 0,
-                })
+                }])
+
+                # Append immediately to CSV so zero progress is ever lost
+                row.to_csv(out_file, mode="a", header=not out_file.exists(), index=False)
 
                 print(
                     f"[{call_count}/{total_calls}] {tier_name} | {item['id']} (run {run_idx}) "
                     f"-> JSON:{valid_json} | Correct:{is_correct} ({extracted} vs {item['expected_answer']})"
                 )
-                time.sleep(1.2)  # Keeps token throughput safely under free-tier TPM caps
+                time.sleep(0.8)
 
-    df = pd.DataFrame(records)
-    safe_model_name = model.replace("/", "_")
-    tag = "pilot" if pilot else "full"
-    out_file = Path(f"data/results/{safe_model_name}_{tag}.csv")
-    out_file.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(out_file, index=False)
-
-    print(f"\nSaved raw logs to {out_file}\n")
+    df = pd.read_csv(out_file)
+    print(f"\nCompleted all {len(df)} trials in {out_file}\n")
     summary = df.groupby("tier").agg(
         json_compliance_pct=("valid_json", lambda x: round(x.mean() * 100, 1)),
         accuracy_pct=("is_correct", lambda x: round(x.mean() * 100, 1)),
@@ -136,7 +148,7 @@ def run_benchmark(model: str, base_url: str, api_key: str, n_runs: int, pilot: b
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run LLM Prompt Determinism Benchmark")
-    parser.add_argument("--model", default="openai/gpt-oss-20b", help="Model identifier")
+    parser.add_argument("--model", default="llama-3.1-8b-instant", help="Model identifier")
     parser.add_argument("--base-url", default="https://api.groq.com/openai/v1", help="OpenAI-compatible endpoint")
     parser.add_argument("--runs", type=int, default=3, help="Repeated runs per task to measure determinism")
     parser.add_argument("--pilot", action="store_true", help="Run on a 3-task subset first")
