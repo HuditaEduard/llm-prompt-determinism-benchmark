@@ -1,5 +1,5 @@
 model,tier,total_runs,json_compliance_pct,accuracy_pct,avg_latency_ms,avg_completion_tokens,determinism_pct
-openai/gpt-oss-20b,T0_zero_shot,9,0.0,44.4,890.4,623.2,66.7
-openai/gpt-oss-20b,T1_schema_only,9,100.0,66.7,1851.1,380.9,33.3
-openai/gpt-oss-20b,T2_zero_shot_cot,9,88.9,66.7,6262.6,804.2,33.3
-openai/gpt-oss-20b,T3_few_shot_cot,9,100.0,100.0,5908.8,731.6,66.7
+qwen3:8b,T0_zero_shot,180,0.0,90.6,79180.1,4067.4,75.0
+qwen3:8b,T1_schema_only,180,85.6,93.9,51150.1,2146.2,80.0
+qwen3:8b,T2_zero_shot_cot,180,74.4,94.4,66402.4,2875.1,78.3
+qwen3:8b,T3_few_shot_cot,180,86.1,96.7,40944.1,1945.9,76.7

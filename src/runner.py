@@ -1,4 +1,4 @@
-import argparse
+﻿import argparse
 import json
 import os
 import re
@@ -78,7 +78,7 @@ def run_benchmark(model: str, base_url: str, api_key: str, n_runs: int, pilot: b
         dataset = [dataset[0], dataset[20], dataset[40]]
         print("Running in PILOT mode (3 tasks across domains)...")
 
-    safe_model_name = model.replace("/", "_")
+    safe_model_name = model.replace("/", "_").replace(":", "_")
     tag = "pilot" if pilot else "full"
     out_file = Path(f"data/results/{safe_model_name}_{tag}.csv")
     out_file.parent.mkdir(parents=True, exist_ok=True)
